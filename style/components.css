@@ -1,0 +1,113 @@
+/* Buttons, Cards, etc. */
+@font-face {
+    font-family: "Sylfaen";
+    src: url('../style/assets/fonts/sylfaen-regular.woff2') format('woff2'),
+        url('../style/assets/fonts/sylfaen-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-family: "CENTURY";
+    src: url('../style/assets/fonts/CENTURY-regular.woff2') format('woff2'),
+        url('../style/assets/fonts/CENTURY-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    padding: 0px;
+    background-color: #504A57;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*Caractéristiques des boutons visibles sur l'accueil*/
+
+.button {
+    display: inline-block;
+    text-align: center;
+    height: 40px;
+    width: 260px;
+    margin: 15px;
+    font-family: "Sylfaen", sans-serif;
+    font-size: 1.5rem;
+    background-color: #504A57;
+    color: rgb(255, 255, 255);
+    border: solid #504A57;
+    cursor: pointer;
+}
+
+/*fait apprettre un cadre blanc pour le survole des boutons de l'accueil*/
+
+.button:hover {
+    border-color: #ffffff;
+    border-width: 5px;
+}
+
+.boutton_fleche_haut {
+    margin-bottom: 10px;
+    margin-left: 90%;
+    flex-wrap: wrap;
+    z-index: 1;
+    clip-path: ellipse(38% 38%);
+    background-color: none;
+    cursor: pointer;
+}
+
+.boutton_fleche_bas {
+    margin-top: 10px;
+    margin-left: 90%;
+    flex-wrap: wrap;
+    z-index: 1;
+    clip-path: ellipse(38% 38%);
+    cursor: pointer;
+}
+
+/*Cela représente le boutton pour accéder au CV*/
+.CV {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    height: 40px;
+    width: 260px;
+    margin-top: 120px;
+    font-family: "Sylfaen", sans-serif;
+    font-size: 1.5rem;
+    background-color: #504A57;
+    color: rgb(255, 255, 255);
+    border: solid #504A57;
+    cursor: pointer;
+}
+
+.CV:hover {
+    border-color: #ffffff;
+    border-width: 5px;
+}
+
+.envoi {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    height: 40px;
+    width: 260px;
+    margin-top: -80px;
+    margin-left: 580px;
+    font-family: "Sylfaen", sans-serif;
+    font-size: 1.5rem;
+    background-color: #504A57;
+    color: rgb(255, 255, 255);
+    border: solid #504A57;
+    cursor: pointer;
+}
+
+.envoi:hover {
+    border-color: #ffffff;
+    border-width: 5px;
+    cursor: pointer;
+}
+
+.lien {
+    cursor: pointer;
+    margin-left: 50px;
+    height: 60px;
+}
