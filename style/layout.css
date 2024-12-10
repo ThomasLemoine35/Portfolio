@@ -95,6 +95,16 @@ article {
     font-family: "CENTURY";
 }
 
+#pixel
+{
+    background-color: #2D2A2F;
+    width: 350px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "CENTURY";
+}
+
+
 /*Ce sont toutes les lignes blanches visibles sur le site*/
 .ligne {
     background-color: rgb(255, 255, 255);
