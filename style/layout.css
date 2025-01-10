@@ -273,12 +273,16 @@ textarea{
     height: 170px;
 }
 
+#bas_contact{
+    padding-top: 400px;
+}
+
 #img_Contact{
     position: absolute;
     width: 650px;
     height: 450px;
-    margin-top: 75px;
-    margin-left: 19%;
+    margin-top: -550px;
+    margin-left: 57.05%;
 }
 
 .logo{
@@ -287,8 +291,9 @@ textarea{
     flex-direction: column;
     width: 70px;
     height: 60px;
-    margin-left: 370px;
-    margin-top: 180px;
+    margin-left: 1000px;
+    margin-top: -475px;
+
 }
 
 .logo_mail{
@@ -307,8 +312,8 @@ textarea{
     flex-direction: column;
     width: 200px;
     height: 60px;
-    margin-left: 500px;
-    margin-top: -50px;
+    margin-left: 1100px;
+    margin-top: -75px;
 }
 
 .mail{
