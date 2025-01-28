@@ -80,6 +80,12 @@ article {
     width: 350px;
 }
 
+.projet:hover{
+    height: 525px;
+    width: 425px;
+
+}
+
 .legende {
     background-color: #2D2A2F;
     color: #ffffff;
