@@ -74,9 +74,25 @@
                 <p class="legende">Face verte</p>
             </div>
             <div class="espace">
-                <a href="goku.html"><img class="projet" src="./media/images/Goku.jpg" alt="Songoku"></a>
+                <a href="goku.html"><img id="goku" class="projet" src="./media/images/Goku.jpg" alt="Songoku"></a>
                 <p class="legende">Goku ssj Namek</p>
             </div>
+
+            <script>
+                const button = document.querySelector("#myButton");
+                const image = document.querySelector("#goku");
+        
+                button.addEventListener("click", () => {
+                    // Vérifie l'image actuelle et change en conséquence
+                    if (image.src.includes("Goku.jpg")) {
+                        image.src = "./media/images/Goku_vectoriel.jpg"; // Nouvelle image
+                        image.alt = "Goku vectoriel";
+                    } else {
+                        image.src = "./media/images/Goku.jpg"; // Remet l'image originale
+                        image.alt = "Songoku";
+                    }
+                });
+            </script>
             <div class="espace">
                <a href="soleil.html"><img class="projet" src="./media/images/coucher.jpg" alt="Coucher_de_soleil"></a>
                 <p class="legende">Coucher au port </p>
