@@ -43,6 +43,10 @@ nav {
     border-width: 5px;
 }
 
+#myButton{
+    margin-left: 40%;
+}
+
 .boutton_fleche_haut {
     margin-bottom: 10px;
     margin-left: 90%;
