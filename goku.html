@@ -14,12 +14,28 @@
 
 <body>
 
+    <button class="b" id="myButton">Version vectorielle</button>
     <div class="descriptif">
         <img class="img" src="./media/images/Goku.jpg" alt="mario isométrique">
         <p class="bloc">J'ai voulu reproduire une scène visible dans l'animé dragon ball Z en dessin, comme j'en étais
             fière, j'ai décidé de l'introduire dans mon portfolio.</p>
     </div>
+    <script>
+        const button = document.querySelector("#myButton");
+        const image = document.querySelector("#goku");
 
+        button.addEventListener("click", () => {
+            // Vérifie l'image actuelle et change en conséquence
+            if (image.src.includes("Goku.jpg")) {
+                image.src = "./media/images/Goku_vectoriel.jpg"; // Nouvelle image
+                image.alt = "Goku vectoriel";
+            } else {
+                image.src = "./media/images/Goku.jpg"; // Remet l'image originale
+                image.alt = "Songoku";
+            }
+        });
+    </script>
+    
 
 </body>
 
