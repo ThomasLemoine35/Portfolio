@@ -83,7 +83,16 @@ article {
 .projet:hover{
     height: 525px;
     width: 425px;
+}
 
+#screen_tel{
+    height: 600px;
+    width: 350px;
+}
+
+#screen_tel:hover{
+    height: 675px;
+    width: 425px;
 }
 
 .legende {
