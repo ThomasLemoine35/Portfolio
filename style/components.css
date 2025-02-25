@@ -22,9 +22,10 @@ nav {
 
 /*Caractéristiques des boutons visibles sur l'accueil*/
 
-.button {
+.b {
     display: inline-block;
     text-align: center;
+    text-decoration: none;
     height: 40px;
     width: 260px;
     margin: 15px;
@@ -38,7 +39,7 @@ nav {
 
 /*fait apprettre un cadre blanc pour le survole des boutons de l'accueil*/
 
-.button:hover {
+.b:hover {
     border-color: #ffffff;
     border-width: 5px;
 }
