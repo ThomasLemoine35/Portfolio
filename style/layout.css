@@ -8,6 +8,62 @@ header {
     flex-wrap: wrap;
 }
 
+nav {
+    padding: 0px;
+    background-color: #504A57;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration:none;
+}
+    
+
+
+label
+{
+    display: none;
+}
+
+label, #toggle
+{
+    display: none;
+}
+ 
+@media all and (max-width: 991px)
+{
+    nav
+    {
+        height: 60px;
+    }
+ 
+    nav .menu 
+    {
+        display: none;
+        flex-direction: column;
+        background: #504A57;
+        height: 255px;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        background-color: #504A57;
+        
+    }
+    #toggle:checked + .menu {
+        display: flex;
+    }
+}
+
 body {
     background-color: #504A57;
     flex-wrap: wrap;
