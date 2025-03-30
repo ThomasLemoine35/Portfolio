@@ -80,6 +80,13 @@ h1 {
     font-size: 4.2em;
 }
 
+.click {
+    color: #ffffff;
+    background-color: #2D2A2F;
+    text-align: center;
+    width: 200px;
+}
+
 #Amorce {
     margin-left: 325px;
     color: #ffffff;
@@ -139,6 +146,10 @@ article {
 .projet:hover{
     height: 525px;
     width: 425px;
+}
+
+#mario{
+    width: 500px;
 }
 
 #screen_tel{

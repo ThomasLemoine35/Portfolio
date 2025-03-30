@@ -6,25 +6,28 @@ body{
 
 
 .img{
+    margin-top: 50px;
     height: 550px;
     width: 450px;
 }
 
+
 .descriptif{
     display: flex;
-    margin-top: 100px;
+    margin-bottom: 1px;
     margin-left: 75px;
 }
 
 .bloc{
-    color: aliceblue;
+    color: rgb(239, 239, 239);
     font-family: "Sylfaen", sans-serif;
-    width: 500px;
+    width: 750px;
     height: auto;
     border: 1rem solid #2D2A2F;
-    margin-left: 200px;
+    margin-left: 75px;
     line-height: 30px;
     background-color: #2D2A2F;
+    /*-webkit-text-stroke: 0.5px rgb(0, 0, 0);*/
 }
 
 .pied{
