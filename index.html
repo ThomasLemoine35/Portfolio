@@ -18,7 +18,7 @@
         <label for="toggle">☰</label>
         <input type="checkbox" id="toggle">
         <div class="menu">
-            <a class="b">Accueil</a>
+            <a href="index.html" class="b">Accueil</a>
             <a href="#creation" class="b">Portfolio</a>
             <a href="#ma_bio0" class="b">Qui-suis-je</a>
             <a href="#bas_contact" class="b">Contact</a>
@@ -36,19 +36,29 @@
     <button class="boutton_fleche_bas"><img src="./media/images/Fleche_bas.png" alt="fleche_bas"></button></a>
 
 <body>
+
+<div class="filter-buttons">
+  <button class="b" onclick="filterImages('all')">Tout</button>
+  <button class="b" onclick="filterImages('illustration')">illustration</button>
+  <button class="b" onclick="filterImages('photo')">photo</button>
+  <button class="b" onclick="filterImages('animation')">animation</button>
+</div>
+
+<div class="gallery">
+
     <section id="creation" role="region" aria-label="accéder aux Projets">
         <h2 class="projetMMI">Projets réalisés en MMI</h2>
         <div class="Section-1">
-            <div class="espace">               
+            <div class="espace illustration">               
                 <a href="isometrie.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/Mario.png" alt="Mario"></a>
                 <p class="legende">Illustration : Mario isométrique</p>
             </div>
-            <div class="espace">
+            <div class="espace illustration">
                 <a href="festival_mmi.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/Festival.png"
                         alt="Festival_MMI"></a>
                 <p class="legende">Affiche : Festival à l'west</p>
             </div>
-            <div class="espace">
+            <div class="espace photo">
                 <a href="freeman.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/Morgan.png" alt="Freeman"></a>
                 <p class="legende">Photomontage : Mecha Freeman </p>
             </div>
@@ -57,7 +67,7 @@
 
     <section id="creation" role="region" aria-label="accéder aux Projets">
         <div class="Section-1">
-            <div class="espace">
+            <div class="espace illustration">
                 <a href="infographie.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/infographie.png"
                     alt="infographie"></a>
                 <p id="l">Infographie : Secret d'Andréa Ghez </p>
@@ -65,6 +75,11 @@
             <div class="espace">
                 <a href="application.html"><h2 class="click">Je suis cliquable !</h2><img id="screen_tel" src="./media/images/Accueil.jpg"
                         alt="page aplli agrégateure"></a>
+                <p id="l">UI/UX : Appli Loisir</p>
+            </div>
+            <div class="espace">
+                <a href="dolmen.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/t_shirt_dolmen.jpg"
+                        alt="Porter un Dolmen !"></a>
                 <p id="l">UI/UX : Appli Loisir</p>
             </div>
         </div>
@@ -86,7 +101,7 @@
                         alt="libellule_verte"></a>
                 <p class="legende">Photographie : Face verte</p>
             </div>
-            <div class="espace">
+            <div class="espace illustration">
                 <a href="goku.html"><h2 class="click">Je suis cliquable !</h2><img id="goku" class="projet" src="./media/images/Goku.jpg" alt="Songoku"></a>
                 <p class="legende">Illustration : Goku ssj Namek</p>
             </div>
@@ -106,7 +121,7 @@
                     }
                 });
             </script>
-            <div class="espace">
+            <div class="espace photo">
                 <a href="soleil.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/coucher.jpg" alt="Coucher_de_soleil"></a>
                 <p class="legende">Photographie : Coucher au port </p>
             </div>
@@ -115,18 +130,34 @@
 
     <section id="creation" role="region" aria-label="accéder aux Projets">
         <div class="Section-1">
-            <div class="espace">
+            <div class="espace animation">
                 <a href="pixel.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/racaille.gif" alt="racaille pixeliser"></a>
                 <p id="pixel">Pixel art : Racaille pixeliser</p>
             </div>
 
-                <div class="espace">
+                <div class="espace animation">
                     <a href="diaorama.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/M.png" alt="M de mario"></a>
                     <p class="legende">3D : Diorama-rio World</p>
                 </div>
 
         </div>
     </section>
+
+      Javascript
+  <script>
+function filterImages(category) {
+  const items = document.querySelectorAll('.espace');
+
+  items.forEach(item => {
+    if (category === 'all' || item.classList.contains(category)) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
+}
+</script>
+</div> 
 
     <hr class="ligne">
 

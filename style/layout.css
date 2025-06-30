@@ -72,6 +72,28 @@ body {
     margin: 0
 }
 
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.espace {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.espace.hidden {
+  display: none;
+}
+
+.filter-buttons {
+    position: absolute;
+  margin-top: 500px;
+}
+
 h1 {
     font-family: "Sylfaen", sans-serif;
     margin-left: 525px;
@@ -101,8 +123,8 @@ article {
 }
 
 
+
 .projetMMI {
-    background-color: #2D2A2F;
     color: #ffffff;
     font-family: "Sylfaen", sans-serif;
     font-size: 2em;
@@ -114,7 +136,6 @@ article {
 }
 
 .personnel{
-    background-color: #2D2A2F;
     color: #ffffff;
     font-family: "Sylfaen", sans-serif;
     font-size: 2em;
@@ -134,7 +155,7 @@ article {
 /*Ce code permet d'espacer mes projets*/
 .espace {
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 150px;
     margin-right: 50px;
 }
 
