@@ -1,118 +1,56 @@
-/* Buttons, Cards, etc. */
-@font-face {
-    font-family: "Sylfaen";
-    src: url('../style/assets/fonts/sylfaen-regular.woff2') format('woff2'),
-        url('../style/assets/fonts/sylfaen-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-family: "CENTURY";
-    src: url('../style/assets/fonts/CENTURY-regular.woff2') format('woff2'),
-        url('../style/assets/fonts/CENTURY-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+/* ===== COMPONENTS.CSS ===== */
+
+:root {
+    --bg-main: #504A57;
+    --bg-dark: #2D2A2F;
+    --text-light: #ffffff;
+    --font-title: "Sylfaen", sans-serif;
+    --font-body: "CENTURY";
 }
 
-nav {
-    padding: 0px;
-    background-color: #504A57;
-    display: flex;
-    justify-content: center;
-
-}
-
-/*Caractéristiques des boutons visibles sur l'accueil*/
-
-.b {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    height: 40px;
-    width: 260px;
-    margin: 15px;
-    font-family: "Sylfaen", sans-serif;
-    font-size: 1.5rem;
-    background-color: #2D2A2F;
-    color: rgb(255, 255, 255);
-    border: solid #504A57;
-    cursor: pointer;
-}
-
-/*fait apprettre un cadre blanc pour le survole des boutons de l'accueil*/
-
-.b:hover {
-    border-color: #ffffff;
-    border-width: 5px;
-}
-
-#myButton{
-    margin-left: 40%;
-}
-
-.boutton_fleche_haut {
-    margin-bottom: 10px;
-    margin-left: 90%;
-    flex-wrap: wrap;
-    z-index: 1;
-    clip-path: ellipse(38% 38%);
-    background-color: none;
-    cursor: pointer;
-}
-
-.boutton_fleche_bas {
-    margin-top: 10px;
-    margin-left: 90%;
-    flex-wrap: wrap;
-    z-index: 1;
-    clip-path: ellipse(38% 38%);
-    cursor: pointer;
-}
-
-/*Cela représente le boutton pour accéder au CV*/
-.CV {
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    height: 40px;
-    width: 260px;
-    margin-top: 120px;
-    font-family: "Sylfaen", sans-serif;
-    font-size: 1.5rem;
-    background-color: #2D2A2F;
-    color: rgb(255, 255, 255);
-    border: solid #504A57;
-    cursor: pointer;
-}
-
-.CV:hover {
-    border-color: #ffffff;
-    border-width: 5px;
-}
-
-.envoi {
-    position: absolute;
+/* Buttons */
+.b, .CV, .envoi {
     display: inline-block;
     text-align: center;
     height: 40px;
     width: 260px;
-    margin-top: -80px;
-    margin-left: 580px;
-    font-family: "Sylfaen", sans-serif;
+    font-family: var(--font-title);
     font-size: 1.5rem;
-    background-color: #504A57;
-    color: rgb(255, 255, 255);
-    border: solid #504A57;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    border: solid var(--bg-main);
     cursor: pointer;
+    transition: border-color 0.2s ease;
 }
 
-.envoi:hover {
+.b:hover, .CV:hover, .envoi:hover {
     border-color: #ffffff;
     border-width: 5px;
-    cursor: pointer;
 }
 
-.lien {
-    cursor: pointer;
-    margin-left: 50px;
-    height: 60px;
+/* Cards / Blocks */
+.cadre {
+    border: 2px solid var(--text-light);
+    width: 320px;
+    height: 300px;
+    margin-top: 60px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.barre {
+    background-color: var(--text-light);
+    width: 100%;
+    height: 2px;
+    margin-top: 30px;
+}
+
+.bloc {
+    color: #efefef;
+    font-family: var(--font-title);
+    width: 750px;
+    background-color: var(--bg-dark);
+    border: 1rem solid var(--bg-dark);
+    padding: 20px;
+    line-height: 30px;
 }

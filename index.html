@@ -1,311 +1,275 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Thomas Lemoine</title>
+    <meta name="description" content="Portfolio de Thomas Lemoine, étudiant en BUT MMI">
+    <title>Thomas Lemoine - Portfolio</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style/components.css">
-    <link rel="stylesheet" href="./style/layout.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style/main.css">
 </head>
-
-
-<header>
-    <nav>
-        <label for="toggle">☰</label>
-        <input type="checkbox" id="toggle">
-        <div class="menu">
-            <a href="index.html" class="b">Accueil</a>
-            <a href="#creation" class="b">Portfolio</a>
-            <a href="#ma_bio0" class="b">Qui-suis-je</a>
-            <a href="#bas_contact" class="b">Contact</a>
-        </div>
-    </nav>
-</header>
-
-<main>
-    <h1>Thomas Lemoine</h1>
-
-    <h2 id="Amorce">Je suis étudiant en BUT 3 MMI et je recherche actuellement un stage en communication d'ici Mars</h2>
-</main>
-
-<a href="#creation">
-    <button class="boutton_fleche_bas"><img src="./media/images/Fleche_bas.png" alt="fleche_bas"></button></a>
-
 <body>
+    <!-- Header & Navigation -->
+    <header id="top">
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            
+            <ul class="nav-menu">
+                <li><a href="#top" class="nav-link">Accueil</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">Qui suis-je</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="filter-buttons">
-  <button class="b" onclick="filterImages('all')">Tout</button>
-  <button class="b" onclick="filterImages('illustration')">illustration</button>
-  <button class="b" onclick="filterImages('photo')">photo</button>
-  <button class="b" onclick="filterImages('animation')">animation</button>
-</div>
-
-<div class="gallery">
-
-    <section id="creation" role="region" aria-label="accéder aux Projets">
-        <h2 class="projetMMI">Projets réalisés en MMI</h2>
-        <div class="Section-1">
-            <div class="espace illustration">               
-                <a href="isometrie.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/Mario.png" alt="Mario"></a>
-                <p class="legende">Illustration : Mario isométrique</p>
-            </div>
-            <div class="espace illustration">
-                <a href="festival_mmi.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/Festival.png"
-                        alt="Festival_MMI"></a>
-                <p class="legende">Affiche : Festival à l'west</p>
-            </div>
-            <div class="espace photo">
-                <a href="freeman.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/Morgan.png" alt="Freeman"></a>
-                <p class="legende">Photomontage : Mecha Freeman </p>
-            </div>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">Thomas Lemoine</h1>
+        <p class="hero-subtitle">
+            Étudiant en BUT 3 MMI - Recherche un stage en communication d'ici Mars
+        </p>
+        <a href="#portfolio" class="scroll-btn" aria-label="Voir le portfolio">
+            <img src="./media/images/Fleche_bas.png" alt="">
+        </a>
     </section>
 
-    <section id="creation" role="region" aria-label="accéder aux Projets">
-        <div class="Section-1">
-            <div class="espace illustration">
-                <a href="infographie.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/infographie.png"
-                    alt="infographie"></a>
-                <p id="l">Infographie : Secret d'Andréa Ghez </p>
-            </div>
-            <div class="espace">
-                <a href="application.html"><h2 class="click">Je suis cliquable !</h2><img id="screen_tel" src="./media/images/Accueil.jpg"
-                        alt="page aplli agrégateure"></a>
-                <p id="l">UI/UX : Appli Loisir</p>
-            </div>
-            <div class="espace">
-                <a href="dolmen.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/t_shirt_dolmen.jpg"
-                        alt="Porter un Dolmen !"></a>
-                <p id="l">UI/UX : Appli Loisir</p>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <!-- Filtres -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Tout</button>
+            <button class="filter-btn" data-filter="illustration">Illustration</button>
+            <button class="filter-btn" data-filter="photo">Photo</button>
+            <button class="filter-btn" data-filter="animation">Animation</button>
+        </div>
+
+        <!-- Projets MMI -->
+        <div class="projects-container">
+            <h2 class="section-title">Projets réalisés en MMI</h2>
+            
+            <div class="projects-grid">
+                <article class="project-card illustration">
+                    <a href="isometrie.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/Mario.png" alt="Mario isométrique" class="project-img">
+                    </a>
+                    <p class="project-caption">Illustration : Mario isométrique</p>
+                </article>
+
+                <article class="project-card illustration">
+                    <a href="festival_mmi.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/Festival.png" alt="Festival à l'west" class="project-img">
+                    </a>
+                    <p class="project-caption">Affiche : Festival à l'west</p>
+                </article>
+
+                <article class="project-card photo">
+                    <a href="freeman.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/Morgan.png" alt="Mecha Freeman" class="project-img">
+                    </a>
+                    <p class="project-caption">Photomontage : Mecha Freeman</p>
+                </article>
+
+                <article class="project-card illustration">
+                    <a href="infographie.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/infographie.png" alt="Infographie Andrea Ghez" class="project-img">
+                    </a>
+                    <p class="project-caption">Infographie : Secret d'Andréa Ghez</p>
+                </article>
+
+                <article class="project-card">
+                    <a href="application.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/Accueil.jpg" alt="Application Loisir" class="project-img project-img--mobile">
+                    </a>
+                    <p class="project-caption">UI/UX : Appli Loisir</p>
+                </article>
+
+                <article class="project-card">
+                    <a href="dolmen.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/t_shirt_dolmen.jpg" alt="T-shirt Dolmen" class="project-img">
+                    </a>
+                    <p class="project-caption">Design : T-shirt Dolmen</p>
+                </article>
             </div>
         </div>
-    </section>
 
+        <!-- Projets Personnels -->
+        <div class="projects-container">
+            <h2 class="section-title">Projets personnels</h2>
+            
+            <button class="toggle-btn" id="toggle-version">Version vectorielle</button>
+            
+            <div class="projects-grid">
+                <article class="project-card photo">
+                    <a href="libellule.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/libellule.jpg" alt="Libellule verte" class="project-img">
+                    </a>
+                    <p class="project-caption">Photographie : Face verte</p>
+                </article>
 
-    <a href="#haut_menu">
-        <button class="boutton_fleche_haut"><img src="./media/images/Fleche_haut.png" alt="Fleche_haut"></button></a>
+                <article class="project-card illustration">
+                    <a href="goku.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/Goku.jpg" alt="Goku SSJ" class="project-img" id="goku-img">
+                    </a>
+                    <p class="project-caption">Illustration : Goku SSJ Namek</p>
+                </article>
 
-    <a href="#ma_bio">
-        <button class="boutton_fleche_bas"><img src="./media/images/Fleche_bas.png" alt="fleche_bas"></button></a>
+                <article class="project-card photo">
+                    <a href="soleil.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/coucher.jpg" alt="Coucher de soleil" class="project-img">
+                    </a>
+                    <p class="project-caption">Photographie : Coucher au port</p>
+                </article>
 
-    <section role="region" aria-label="accéder aux Projets personnel">
-        <h2 class="personnel">Projets personnels</h2>
-        <button class="boutton" id="myButton">Version vectorielle</button>
-        <div class="Section-1">
-            <div class="espace">
-                <a href="libellule.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/libellule.jpg"
-                        alt="libellule_verte"></a>
-                <p class="legende">Photographie : Face verte</p>
-            </div>
-            <div class="espace illustration">
-                <a href="goku.html"><h2 class="click">Je suis cliquable !</h2><img id="goku" class="projet" src="./media/images/Goku.jpg" alt="Songoku"></a>
-                <p class="legende">Illustration : Goku ssj Namek</p>
-            </div>
+                <article class="project-card animation">
+                    <a href="pixel.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/racaille.gif" alt="Pixel art animé" class="project-img">
+                    </a>
+                    <p class="project-caption">Pixel art : Animation</p>
+                </article>
 
-            <script>
-                const button = document.querySelector("#myButton");
-                const image = document.querySelector("#goku");
-
-                button.addEventListener("click", () => {
-                    // Vérifie l'image actuelle et change en conséquence
-                    if (image.src.includes("Goku.jpg")) {
-                        image.src = "./media/images/Goku_vectoriel.jpg"; // Nouvelle image
-                        image.alt = "Goku vectoriel";
-                    } else {
-                        image.src = "./media/images/Goku.jpg"; // Remet l'image originale
-                        image.alt = "Songoku";
-                    }
-                });
-            </script>
-            <div class="espace photo">
-                <a href="soleil.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/coucher.jpg" alt="Coucher_de_soleil"></a>
-                <p class="legende">Photographie : Coucher au port </p>
+                <article class="project-card animation">
+                    <a href="diaorama.html" class="project-link">
+                        <div class="project-overlay">Voir le projet</div>
+                        <img src="./media/images/M.png" alt="Diorama Mario" class="project-img">
+                    </a>
+                    <p class="project-caption">3D : Diorama-rio World</p>
+                </article>
             </div>
         </div>
+
+        <a href="#about" class="scroll-btn" aria-label="Aller à la section À propos">
+            <img src="./media/images/Fleche_bas.png" alt="">
+        </a>
     </section>
 
-    <section id="creation" role="region" aria-label="accéder aux Projets">
-        <div class="Section-1">
-            <div class="espace animation">
-                <a href="pixel.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/racaille.gif" alt="racaille pixeliser"></a>
-                <p id="pixel">Pixel art : Racaille pixeliser</p>
-            </div>
-
-                <div class="espace animation">
-                    <a href="diaorama.html"><h2 class="click">Je suis cliquable !</h2><img class="projet" src="./media/images/M.png" alt="M de mario"></a>
-                    <p class="legende">3D : Diorama-rio World</p>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Qui suis-je</h2>
+            
+            <div class="about-content">
+                <img src="./media/images/photo.png" alt="Thomas Lemoine" class="about-photo">
+                
+                <div class="about-text">
+                    <h3>Mini bio</h3>
+                    <p>
+                        Je m'appelle Thomas Lemoine et je suis actuellement étudiant en deuxième année 
+                        à l'université de Lannion en formation MMI. Je suis titulaire du permis de 
+                        conduire et véhiculé.
+                    </p>
+                    <p>
+                        Dans ma formation, j'apprends à utiliser de multiples moyens de communication 
+                        dans le domaine du multimédia, tel que le logiciel Affinity Designer avec lequel 
+                        j'ai réalisé l'affiche pour le festival MMI, ou le codage qui m'a permis de 
+                        réaliser ce site en HTML et CSS. J'apprends aussi à me servir de matériels audiovisuels.
+                    </p>
+                    <p>
+                        Je voudrais faire à la fois du graphisme et de la communication, car c'est une 
+                        façon de transmettre des informations, voire des émotions à travers des formes 
+                        et des mots. Les travaux des autres m'inspirent énormément et me donnent envie 
+                        de me dépasser.
+                    </p>
+                    <a href="./media/images/Lemoine_Thomas_CV.pdf" class="btn-primary" target="_blank">
+                        Télécharger mon CV
+                    </a>
                 </div>
-
+            </div>
         </div>
     </section>
 
-      Javascript
-  <script>
-function filterImages(category) {
-  const items = document.querySelectorAll('.espace');
+    <!-- Education Section -->
+    <section class="education-section">
+        <div class="container">
+            <h2 class="section-title">Mes formations</h2>
+            
+            <div class="education-grid">
+                <article class="education-card">
+                    <h3>Bac STI2D</h3>
+                    <p class="education-subtitle">
+                        Sciences et Technologies de l'Industrie et du Développement Durable
+                    </p>
+                    <p>
+                        J'ai choisi la spécialité ITEC où j'ai appris à utiliser un logiciel 
+                        pour faire des pièces en 3D : SolidWorks
+                    </p>
+                    <p class="education-place">Lycée Maupertuis : 2021-2023</p>
+                </article>
 
-  items.forEach(item => {
-    if (category === 'all' || item.classList.contains(category)) {
-      item.classList.remove('hidden');
-    } else {
-      item.classList.add('hidden');
-    }
-  });
-}
-</script>
-</div> 
-
-    <hr class="ligne">
-
-    <section class="Mini_bio" role="region" aria-label="accéder à la biographie">
-        <div id="ma_bio">
-            <h2 class="titre_profile">Qui-suis-je</h2>
-            <img id="profile" src="./media/images/photo.png" alt="profile">
+                <article class="education-card">
+                    <h3>BUT MMI</h3>
+                    <p class="education-subtitle">Métiers du Multimédia et de l'Internet</p>
+                    <p>
+                        La MMI m'apporte des connaissances sur une grande diversité de domaines : 
+                        communication, programmation, audiovisuel, marketing, gestion de projet
+                    </p>
+                    <p class="education-place">IUT à Lannion : 2023-2026</p>
+                </article>
+            </div>
         </div>
+    </section>
 
-        <div>
-            <img id="img_bio" src="./style/assets/ui/Forme_1.png" alt="bio">
-            <h2 class="titre_bio">Mini bio</h2>
-            <p class="paragraphe">Je m’appelle Thomas Lemoine et je suis actuellement étudiant en deuxième année à
-                l’université de Lannion
-                en formation MMI, je suis titulaire du permis de conduire et également véhiculer.
-            </p>
-            <p class="paragraphe">
-                Dans ma formation j’apprends à utiliser multiples moyens de communication dans le domaine du multimédia
-                tel que le logiciel
-                Affinity Designer ou j'ai réalisé l'affiche pour le festival MMI juste au-dessus de cette rubrique, ou
-                le
-                codage qui m'a permis de réaliser
-                ce site à l'aide du HTML et CSS, mais j'apprends aussi à me servir de matériels audio-visuels.
-            </p>
-            <p class="paragraphe">
-                Je voudrais aller à la fois faire du graphisme avec de la communication car c'est une façon de
-                transmettre
-                des informations, voir des
-                émotions à travers des formes et des mots. Les travaux des autres m'inspirent énormément et me donnent
-                envie de me dépasser.
-            </p>
-            <a class="CV" href="./media/images/Lemoine_Thomas_CV.pdf" target="_blank">Télécharger mon CV
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Coordonnées</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="./media/images/tel.png" alt="Téléphone" class="contact-icon">
+                    <p>06 33 66 48 94</p>
+                </div>
+                
+                <div class="contact-item">
+                    <img src="./media/images/mail.png" alt="Email" class="contact-icon">
+                    <p>thomaslemoine215@gmail.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <img src="./media/images/pointeur.png" alt="Localisation" class="contact-icon">
+                    <div>
+                        <p>25 Rue des Hortensias</p>
+                        <p>22300 Lannion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Réseaux sociaux :</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/thomaslemoine.21/" target="_blank" rel="noopener" aria-label="Instagram">
+                <img src="./media/images/instagram.png" alt="Instagram">
             </a>
-        </div>
-    </section>
-
-    <a href="#creation">
-        <button class="boutton_fleche_haut"><img src="./media/images/Fleche_haut.png" alt="Fleche_haut"></button></a>
-
-    <a href="#bas_contact">
-        <button class="boutton_fleche_bas"><img src="./media/images/Fleche_bas.png" alt="fleche_bas"></button></a>
-
-    <section class="Formation" role="region" aria-label="accéder aux formations">
-        <img id="img_Formation" src="./style/assets/ui/Forme_2.png" alt="Formation">
-        <h2 class="titre_Formation">Mes Formations</h2>
-        <div class="Etude">
-            <div class="cadre">
-                <p class="Parcour"> <strong> Bac STI2D </strong> (Sciences et
-                    Technologies de l’Industrie et
-                    du Développement Durable)</p>
-                <hr class="barre">
-                <p class="Parcour">J’ai choisi la spécialité
-                    ITECH ou j’ai appris à
-                    utiliser un logiciel pour du faire des pièces en 3D : Solidworks
-                <p class="Lycee">Lycée Maupertuis: 2021-2023</p>
-            </div>
-            <div class="cadre">
-                <p class="Parcour"> <strong>BUT MMI</strong> (Métiers du
-                    Multimédia et de l’Internet)</p>
-                <hr class="barre">
-                <p class="Parcour">La MMI m’apporte des
-                    connaissances sur une
-                    grande diversité de
-                    domaines : communication, programation, audio-visuel, marketing, gestion de projet,
-                <p class="IUT">IUT à Lannion: 2023-2026</p>
-            </div>
-        </div>
-    </section>
-
-    <hr class="ligne">
-
-    <a href="#ma_bio">
-        <button class="boutton_fleche_haut"><img src="./media/images/Fleche_haut.png" alt="Fleche_haut"></button></a>
-
-    <h2 class="titre_profile">Coordonnées</h2>
-    <section class="contact" role="region" aria-label="accéder aux contacts">
-        <!-- <div id="bas_contact">
-            <h2 class="titre_profile">Hors Service !!</h2>
-
-            <form action=contact.php method="post">
-                <ul>
-                    <li>
-                        <label for="nom">
-                            <h2>Nom :</h2>
-                            <textarea name="nom" placeholder="Taper votre nom"></textarea>
-                        </label>
-                    </li>
-                    <li>
-                        <label for="email">
-                            <h2>E-mail :</h2>
-                            <textarea name="email" placeholder="Taper votre E-mail"></textarea>
-                        </label>
-                    </li>
-                    <li>
-                        <label for="objet">
-                            <h2>Objet du message :</h2>
-                            <textarea name="objet" placeholder="Écrivez l’intituler de votre objet"></textarea>
-                        </label>
-                    </li>
-                    <li>
-                        <label for="message">
-                            <h2>Message :</h2>
-                            <textarea id="Message" name="message"
-                                placeholder="Marquer l’ensemble de votre message"></textarea>
-                        </label>
-                    </li>
-                </ul>
-                <button type="submit" class="envoi">Envoyer</button>
-
-            </form>
-        </div> -->
-
-        <div id="bas_contact">
-            <img id="img_Contact" src="./style/assets/ui/Forme_3.png" alt="Formation">
-            <div class="logo">
-                <img src="./media/images/tel.png" alt="telephone">
-                <img class="logo_mail" src="./media/images/mail.png" alt="E-mail">
-                <img src="./media/images/pointeur.png" alt="localisation">
-            </div>
-            <div class="coordonnées">
-                <p>06 33 66 48 94</p>
-                <p class="mail">thomaslemoine215@gmail.com</p>
-                <p>22300 Lannion
-                </p>
-                <p>
-                    25 Rue des Hortensias
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <hr class="ligne">
-
-
-    <footer class="pied">
-        <div class="reseau">
-            <p id="indicateur">Réseaux sociaux :</p>
-            <a href="https://www.instagram.com/thomaslemoine.21/" target="_blank">
-                <img class="lien" src="./media/images/instagram.png" alt="instagram">
+            <a href="https://www.facebook.com/thomas.lemoine.5076" target="_blank" rel="noopener" aria-label="Facebook">
+                <img src="./media/images/facebook.png" alt="Facebook">
             </a>
-            <a href="https://www.facebook.com/thomas.lemoine.5076?locale=fr_FR" target="_blank">
-                <img class="lien" src="./media/images/facebook.png" alt="facebook">
-            </a>
-            <a href="https://www.linkedin.com/in/thomas-lemoine-a6364b29b/" target="_blank">
-                <img class="lien" src="./media/images/linkedin.png" alt="linkedin">
+            <a href="https://www.linkedin.com/in/thomas-lemoine-a6364b29b/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="./media/images/linkedin.png" alt="LinkedIn">
             </a>
         </div>
     </footer>
-</body>
 
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+</body>
 </html>
