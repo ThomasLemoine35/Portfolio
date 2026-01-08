@@ -1,275 +1,549 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Thomas Lemoine, étudiant en BUT MMI">
     <title>Thomas Lemoine - Portfolio</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header & Navigation -->
-    <header id="top">
-        <nav class="navbar">
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">☰</label>
-            
-            <ul class="nav-menu">
-                <li><a href="#top" class="nav-link">Accueil</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#about" class="nav-link">Qui suis-je</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="#contact"><button type="button" class="button">
+                        <div class="button-top">Contact</div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                    </button></a></li>
+            <li><a href="#accueil"><button type="button" class="button">
+                        <div class="button-top">Accueil</div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                    </button></a></li>
+            <li><a href="#qui-suis-je"><button type="button" class="button">
+                        <div class="button-top">Qui-suis-je</div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                    </button></a></li>
+            <li><a href="#portfolio"><button type="button" class="button">
+                        <div class="button-top">Portfolio</div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                    </button></a></li>
+        </ul>
+    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1 class="hero-title">Thomas Lemoine</h1>
-        <p class="hero-subtitle">
-            Étudiant en BUT 3 MMI - Recherche un stage en communication d'ici Mars
-        </p>
-        <a href="#portfolio" class="scroll-btn" aria-label="Voir le portfolio">
-            <img src="./media/images/Fleche_bas.png" alt="">
-        </a>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <!-- Filtres -->
-        <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">Tout</button>
-            <button class="filter-btn" data-filter="illustration">Illustration</button>
-            <button class="filter-btn" data-filter="photo">Photo</button>
-            <button class="filter-btn" data-filter="animation">Animation</button>
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Thomas Lemoine</h1>
+            <p>Étudiant en BUT MMI (Métiers du multimédia et de l'internet)</p>
+            <p>À la recherche d'un stage d'ici le 9 Mars jusqu'au 19 Juin</p>
         </div>
-
-        <!-- Projets MMI -->
-        <div class="projects-container">
-            <h2 class="section-title">Projets réalisés en MMI</h2>
-            
-            <div class="projects-grid">
-                <article class="project-card illustration">
-                    <a href="isometrie.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/Mario.png" alt="Mario isométrique" class="project-img">
-                    </a>
-                    <p class="project-caption">Illustration : Mario isométrique</p>
-                </article>
-
-                <article class="project-card illustration">
-                    <a href="festival_mmi.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/Festival.png" alt="Festival à l'west" class="project-img">
-                    </a>
-                    <p class="project-caption">Affiche : Festival à l'west</p>
-                </article>
-
-                <article class="project-card photo">
-                    <a href="freeman.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/Morgan.png" alt="Mecha Freeman" class="project-img">
-                    </a>
-                    <p class="project-caption">Photomontage : Mecha Freeman</p>
-                </article>
-
-                <article class="project-card illustration">
-                    <a href="infographie.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/infographie.png" alt="Infographie Andrea Ghez" class="project-img">
-                    </a>
-                    <p class="project-caption">Infographie : Secret d'Andréa Ghez</p>
-                </article>
-
-                <article class="project-card">
-                    <a href="application.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/Accueil.jpg" alt="Application Loisir" class="project-img project-img--mobile">
-                    </a>
-                    <p class="project-caption">UI/UX : Appli Loisir</p>
-                </article>
-
-                <article class="project-card">
-                    <a href="dolmen.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/t_shirt_dolmen.jpg" alt="T-shirt Dolmen" class="project-img">
-                    </a>
-                    <p class="project-caption">Design : T-shirt Dolmen</p>
-                </article>
+        <div class="hero-image">
+            <div class="video-background">
+                <video autoplay muted loop id="backgroundVideo">
+                    <source src="media/pokeball.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas les vidéos HTML5
+                </video>
             </div>
         </div>
-
-        <!-- Projets Personnels -->
-        <div class="projects-container">
-            <h2 class="section-title">Projets personnels</h2>
-            
-            <button class="toggle-btn" id="toggle-version">Version vectorielle</button>
-            
-            <div class="projects-grid">
-                <article class="project-card photo">
-                    <a href="libellule.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/libellule.jpg" alt="Libellule verte" class="project-img">
-                    </a>
-                    <p class="project-caption">Photographie : Face verte</p>
-                </article>
-
-                <article class="project-card illustration">
-                    <a href="goku.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/Goku.jpg" alt="Goku SSJ" class="project-img" id="goku-img">
-                    </a>
-                    <p class="project-caption">Illustration : Goku SSJ Namek</p>
-                </article>
-
-                <article class="project-card photo">
-                    <a href="soleil.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/coucher.jpg" alt="Coucher de soleil" class="project-img">
-                    </a>
-                    <p class="project-caption">Photographie : Coucher au port</p>
-                </article>
-
-                <article class="project-card animation">
-                    <a href="pixel.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/racaille.gif" alt="Pixel art animé" class="project-img">
-                    </a>
-                    <p class="project-caption">Pixel art : Animation</p>
-                </article>
-
-                <article class="project-card animation">
-                    <a href="diaorama.html" class="project-link">
-                        <div class="project-overlay">Voir le projet</div>
-                        <img src="./media/images/M.png" alt="Diorama Mario" class="project-img">
-                    </a>
-                    <p class="project-caption">3D : Diorama-rio World</p>
-                </article>
-            </div>
-        </div>
-
-        <a href="#about" class="scroll-btn" aria-label="Aller à la section À propos">
-            <img src="./media/images/Fleche_bas.png" alt="">
-        </a>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">Qui suis-je</h2>
-            
-            <div class="about-content">
-                <img src="./media/images/photo.png" alt="Thomas Lemoine" class="about-photo">
-                
-                <div class="about-text">
-                    <h3>Mini bio</h3>
-                    <p>
-                        Je m'appelle Thomas Lemoine et je suis actuellement étudiant en deuxième année 
-                        à l'université de Lannion en formation MMI. Je suis titulaire du permis de 
-                        conduire et véhiculé.
-                    </p>
-                    <p>
-                        Dans ma formation, j'apprends à utiliser de multiples moyens de communication 
-                        dans le domaine du multimédia, tel que le logiciel Affinity Designer avec lequel 
-                        j'ai réalisé l'affiche pour le festival MMI, ou le codage qui m'a permis de 
-                        réaliser ce site en HTML et CSS. J'apprends aussi à me servir de matériels audiovisuels.
-                    </p>
-                    <p>
-                        Je voudrais faire à la fois du graphisme et de la communication, car c'est une 
-                        façon de transmettre des informations, voire des émotions à travers des formes 
-                        et des mots. Les travaux des autres m'inspirent énormément et me donnent envie 
-                        de me dépasser.
-                    </p>
-                    <a href="./media/images/Lemoine_Thomas_CV.pdf" class="btn-primary" target="_blank">
-                        Télécharger mon CV
-                    </a>
+    <section id="portfolio" class="projects">
+        <h2>Mes Projets</h2>
+
+        <div class="category-filters">
+            <button class="category-btn active" onclick="filterProjects('tous')">Tous</button>
+            <button class="button" onclick="filterProjects('illustration')">
+                <div class="button-top">Illustration</div>
+                <div class="button-bottom"></div>
+                <div class="button-base"></div>
+            </button>
+            <button class="button" onclick="filterProjects('level-design')">
+                <div class="button-top">Level Design</div>
+                <div class="button-bottom"></div>
+                <div class="button-base"></div>
+            </button>
+            <button class="button" onclick="filterProjects('marketing')">
+                <div class="button-top">Marketing</div>
+                <div class="button-bottom"></div>
+                <div class="button-base"></div>
+            </button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="illustration" onclick="openModal(0)">
+                <img class="project-image" src="media/projet/Mario.png" alt="">
+                <h3>Mario isométrique</h3>
+            </div>
+            <div class="project-card" data-category="illustration" onclick="openModal(1)">
+                <img class="project-image" src="media/projet/Morgan.png" alt="">
+                <h3>Mecha Freeman</h3>
+            </div>
+            <div class="project-card" data-category="level-design" onclick="openModal(2)">
+                <img class="project-image" src="media/projet/Racaille.gif" alt="">
+                <h3>Racaille pixeliser</h3>
+            </div>
+            <div class="project-card" data-category="illustration" onclick="openModal(3)">
+                <img class="project-image" src="media/projet/infographie.png" alt="">
+                <h3>Mystère d'Andréa Ghez</h3>
+            </div>
+            <div class="project-card" data-category="illustration" onclick="openModal(4)">
+                <img class="project-image" src="media/projet/Goku_vectoriel.jpg" alt="">
+                <h3>Goku SSJ Namek</h3>
+            </div>
+            <div class="project-card" data-category="illustration" onclick="openModal(5)">
+                <img class="project-image" src="media/projet/Festival.png" alt="">
+                <h3>Festival à l'west</h3>
+            </div>
+            <div class="project-card" data-category="illustration" onclick="openModal(6)">
+                <img class="project-image" src="media/projet/Dolmen.jpg" alt="">
+                <h3>T-shirt Dolmen</h3>
+            </div>
+            <div class="project-card" data-category="level-design" onclick="openModal(7)">
+                <img class="project-image" src="media/projet/Diaorama.png" alt="">
+                <h3>Diora-mario World</h3>
+            </div>
+            <div class="project-card" data-category="level-design" onclick="openModal(8)">
+                <img class="project-image" src="media/projet/Proto.png" alt="">
+                <h3>Test Unity</h3>
+            </div>
+            <div class="project-card" data-category="level-design" onclick="openModal(9)">
+                <img class="project-image" src="media/projet/Panneau.jpg" alt="">
+                <h3>Panneau Jagu</h3>
+            </div>
+            <div class="project-card" data-category="marketing" onclick="openModal(10)">
+                <img class="project-image" src="media/projet/Audit.png" alt="">
+                <h3>Audit Yves rocher</h3>
+            </div>
+            <div class="project-card" data-category="marketing" onclick="openModal(11)">
+                <img class="project-image" src="media/projet/breizh.png" alt="">
+                <h3>Étude Breiz cola</h3>
+            </div>
+            <div class="project-card" data-category="marketing" onclick="openModal(12)">
+                <img class="project-image" src="media/projet/Aquaskin.png" alt="">
+                <h3>Aquaskin</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour les détails du projet -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="" style="display: none;">
+                    <video id="modalVideo" controls style="display: none; width: 100%; max-width: 100%;">
+                        <source id="modalVideoSource" src="" type="video/mp4">
+                        Votre navigateur ne supporte pas les vidéos HTML5
+                    </video>
+                </div>
+                <div class="modal-text">
+                    <h2 id="modalTitle"></h2>
+                    <div id="modalDescription"></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Education Section -->
-    <section class="education-section">
-        <div class="container">
-            <h2 class="section-title">Mes formations</h2>
-            
-            <div class="education-grid">
-                <article class="education-card">
-                    <h3>Bac STI2D</h3>
-                    <p class="education-subtitle">
-                        Sciences et Technologies de l'Industrie et du Développement Durable
-                    </p>
-                    <p>
-                        J'ai choisi la spécialité ITEC où j'ai appris à utiliser un logiciel 
-                        pour faire des pièces en 3D : SolidWorks
-                    </p>
-                    <p class="education-place">Lycée Maupertuis : 2021-2023</p>
-                </article>
+    <section id="qui-suis-je" class="skills">
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>Bac STI2D</h3>
+                <p>Sciences et Technologies de l'Industrie et du Développement Durable</p>
+                <hr style="border: 1px solid rgb(255, 255, 255); width: 80%; margin: 20px auto;">
+                <p>J'ai choisi la spécialité ITEC où j'ai appris à utiliser un logiciel pour faire des pièces en 3D :
+                    SolidWorks</p><br>
 
-                <article class="education-card">
-                    <h3>BUT MMI</h3>
-                    <p class="education-subtitle">Métiers du Multimédia et de l'Internet</p>
-                    <p>
-                        La MMI m'apporte des connaissances sur une grande diversité de domaines : 
-                        communication, programmation, audiovisuel, marketing, gestion de projet
-                    </p>
-                    <p class="education-place">IUT à Lannion : 2023-2026</p>
-                </article>
+                <p class="education-place">Lycée Maupertuis : 2021-2023</p>
+            </div>
+            <div class="skill-box">
+                <h3>BUT MMI</h3>
+                <p>Métiers du Multimédia et de l'Internet</p>
+                <hr style="border: 1px solid rgb(255, 255, 255); width: 80%; margin: 20px auto;">
+                <p>La MMI m'apporte des connaissances sur une grande diversité de domaines : communication,
+                    programmation, audiovisuel, marketing, gestion de projet</p><br>
+
+                <p class="education-place">IUT à Lannion : 2023-2026</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Coordonnées</h2>
-            
+    <section id="contact" class="contact">
+        <div class="contact-container">
             <div class="contact-info">
+                <h2>Me contacter</h2>
                 <div class="contact-item">
-                    <img src="./media/images/tel.png" alt="Téléphone" class="contact-icon">
-                    <p>06 33 66 48 94</p>
-                </div>
-                
-                <div class="contact-item">
-                    <img src="./media/images/mail.png" alt="Email" class="contact-icon">
-                    <p>thomaslemoine215@gmail.com</p>
-                </div>
-                
-                <div class="contact-item">
-                    <img src="./media/images/pointeur.png" alt="Localisation" class="contact-icon">
+                    <div class="contact-icon"><img class="icone" src="media/mail.png" alt="Lettre papier en pixel">
+                    </div>
                     <div>
-                        <p>25 Rue des Hortensias</p>
-                        <p>22300 Lannion</p>
+                        <h3>Email</h3>
+                        <p>thomaslemoine215@email.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><img class="icone" src="media/tel.png" alt="Téléphone en pixel"></div>
+                    <div>
+                        <h3>Téléphone</h3>
+                        <p>+33 6 33 66 48 94</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><img class="icone" src="media/localisation.png"
+                            alt="Point de localisation en pixel"></div>
+                    <div>
+                        <h3>Localisation</h3>
+                        <p>Broualan, Bretagne</p>
                     </div>
                 </div>
             </div>
+            <div class="contact-form">
+                <h2>Envoyer un message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Votre nom et prénom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Votre adresse email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Objet de votre message" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Réseaux sociaux :</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/thomaslemoine.21/" target="_blank" rel="noopener" aria-label="Instagram">
-                <img src="./media/images/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://www.facebook.com/thomas.lemoine.5076" target="_blank" rel="noopener" aria-label="Facebook">
-                <img src="./media/images/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.linkedin.com/in/thomas-lemoine-a6364b29b/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <img src="./media/images/linkedin.png" alt="LinkedIn">
-            </a>
-        </div>
-    </footer>
+    <script>
+        // Données des projets
+        const projectsData = [
+            {
+                title: "Mario isométrique",
+                media: "media/projet/Mario.png",
+                mediaType: "image",
+                category: "illustration",
+                context: "Dans un projet où nous avons dû faire un photomontage avec le logiciel Affinity Photoshop sur une personne, j'ai choisi de le faire sur Morgan Freeman, qui est un acteur que j'apprécie beaucoup.",
+                production: "Je suis donc parti sur quelque chose d'assez abstrait, où Morgan Freeman est un cyborg. C'est pour cela que l'on peut voir qu'il possède un œil robotique et que des morceaux de métal sortent de son corps.",
+                competences: ["Laisser son imagination prendre le dessus", "Assumer que ça soit abstrait"],
+                hardskills: ["Affinity Photoshop", "Utilisation de la roue chromatique"],
+                bilan: "Je suis content, car j'ai pu découvrir comment fonctionnait le photomontage grâce à ce projet."
+            },
+            {
+                title: "Mecha Freeman",
+                media: "media/projet/Morgan.png",
+                mediaType: "image",
+                category: "illustration",
+                context: "Dans le cadre d'un projet de photomontage réalisé avec le logiciel Affinity Photoshop, nous devions travailler à partir du portrait d'une personne. J'ai choisi Morgan Freeman, un acteur que j'apprécie particulièrement.",
+                production: "Je suis parti sur un univers assez abstrait, dans lequel Morgan Freeman est représenté comme un cyborg. On peut ainsi voir qu'il possède un œil robotique et que des éléments métalliques semblent émerger de son corps.",
+                competences: ["Laisser libre cours à son imagination", "Assumer des choix artistiques abstraits"],
+                hardskills: ["Affinity Photoshop", "Roue chromatique"],
+                bilan: "Je suis satisfait de ce projet, car il m'a permis de découvrir et de mieux comprendre le fonctionnement du photomontage."
+            },
+            {
+                title: "Racaille pixeliser",
+                media: "media/projet/Racaille.gif",
+                mediaType: "image",
+                category: "level-design",
+                context: "L'objectif initial était de réaliser une fiche de sprites (éléments graphiques pouvant se déplacer à l'écran) pour un jeu dont le thème est « cyberpunk ». Le projet consistait à créer, dans un premier temps, un personnage en pixel art, puis à produire les différentes animations qui lui sont propres : déplacements, interactions, etc.",
+                production: "Pour le premier niveau, il fallait concevoir un environnement évoquant la rue et les quartiers pauvres, où des vauriens règnent en maîtres. Un design d'ennemi adapté à ce contexte devait donc être imaginé. Concernant les animations, le principe consistait à dupliquer l'étape précédente, puis à modifier légèrement la position de certains pixels afin de créer un effet de mouvement grâce à une succession d'images.",
+                competences: ["Patience, rigueur et motivation", "Capacité à solliciter de l'aide et à échanger avec d'autres personnes"],
+                hardskills: ["Aseprite", "PixiEditor"],
+                bilan: "Ce projet m'a permis d'en apprendre davantage sur le design et l'animation, mais aussi sur l'importance de la motivation et de la rigueur. La gestion du temps a été un véritable enjeu, notamment lorsqu'il fallait avancer sur plusieurs projets en parallèle. Néanmoins, ce travail m'a permis de développer significativement mes hard skills et de renforcer mon intérêt pour ce domaine."
+            },
+            {
+                title: "Mystère d'Andréa Ghez",
+                media: "media/projet/infographie.png",
+                mediaType: "image",
+                category: "illustration",
+                context: "Dans ce projet, nous avons réalisé une infographie mettant en avant une scientifique. J'ai choisi Andrea Ghez, astrophysicienne reconnue pour ses travaux sur le fonctionnement des trous noirs.",
+                production: "Étant parti sur une illustration vectorielle, j'ai utilisé le logiciel Adobe Illustrator pour la réalisation de l'infographie.",
+                competences: ["Recherhce de référence", "Hiérarchie des informations"],
+                hardskills: ["Adobe illustrator", "Dessin vectoriel"],
+                bilan: "Ce projet m'a permis de mieux comprendre la hiérarchisation de l'information. Même si le résultat n'est pas parfait, je trouve l'ensemble lisible et cohérent."
+            },
+            {
+                title: "Goku SSJ Namek",
+                media: "media/projet/Goku_vectoriel.jpg",
+                mediaType: "image",
+                category: "illustration",
+                context: "J'ai souhaité reproduire en dessin une scène issue de l'animé Dragon Ball Z. Étant fier du résultat, j'ai décidé de l'intégrer à mon portfolio.",
+                production: "",
+                competences: ["Patience, rigueur et motivation"],
+                hardskills: ["Adobe Illustrator"],
+                bilan: ""
+            },
+            {
+                title: "Festival à l'west",
+                media: "media/projet/Festival.png",
+                mediaType: "image",
+                category: "illustration",
+                context: "Le premier festival MMI a eu lieu à Lannion. Afin de promouvoir cet événement, les commanditaires (les enseignants de MMI) nous ont demandé de concevoir une affiche de communication en lien avec le festival. Ce projet a été réalisé en équipe de 4 à 5 personnes, organisées en agences, durant le premier semestre 2023. L'affiche devait à la fois promouvoir le festival et retranscrire la vision du commanditaire.",
+                production: "En agence : création d'une charte graphique et d'un moodboard (planche de tendances). En individuel : conception d'une première version de l'affiche, puis d'une version finale",
+                competences: ["Concevoir un modèle d'affiche", "S'inspirer d'affiches existantes"],
+                hardskills: ["Affinity Designer", "Brainstorming", "Carte mentale"],
+                bilan: "Ce projet m'a permis d'acquérir davantage d'expérience sur Affinity Designer et d'enrichir mes références artistiques."
+            },
+            {
+                title: "T-shirt Dolmen",
+                media: "media/projet/Dolmen.jpg",
+                mediaType: "image",
+                category: "illustration",
+                context: "Dans le cadre des portes ouvertes de l'entreprise Dolmen Manufacture (boutique spécialisée dans les vêtements de travail, située à Pabu – 22200), j'ai réalisé un design destiné à être imprimé sur le devant de T-shirts. Ces T-shirts étaient conçus pour être portés et vus par les particuliers lors de l'événement.",
+                production: "Le directeur souhaitait s'appuyer sur une référence à Obélix portant un menhir, accompagnée de la phrase : « Tout le monde ne peut pas porter un menhir, un dolmen si ! » Cette accroche joue avec le nom de l'entreprise, Dolmen Manufacture. Dans un premier temps, j'ai utilisé ChatGPT pour générer une image s'inspirant du personnage d'Obélix. Le rendu n'étant pas suffisamment convaincant, j'ai effectué des recherches de références visuelles, puis demandé à ChatGPT d'adapter l'apparence du personnage (vêtements et carrure) en m'appuyant sur une affiche présente dans l'entreprise. Par la suite, je suis intervenu manuellement afin de corriger certains détails, d'améliorer le rendu global et d'ajouter des éléments de call-to-action.",
+                competences: ["Autonomie", "Gestion d'un projet"],
+                hardskills: ["Adobe Illustrator", "Photoshop"],
+                bilan: "Ce projet, ainsi que l'ensemble des réalisations effectuées durant ce stage, m'a permis de m'immerger dans le monde professionnel et de travailler pour de véritables clients. Les retours et commentaires du personnel et du directeur de l'entreprise m'ont permis de progresser et d'apprendre davantage."
+            },
+            {
+                title: "Diora-mario World",
+                media: "media/projet/Diaorama.mp4",
+                mediaType: "video",
+                category: "level-design",
+                context: "Dans le cadre des cours dédiés à l'apprentissage du logiciel Blender, il nous a été demandé de réaliser un diorama (maquette représentant un environnement) dans l'univers de notre choix.",
+                production: "Étant fan de l'univers Mario, j'ai choisi de réaliser un fan art en intégrant des éléments emblématiques tels que les blocs mystère, les briques, ainsi que le personnage de Mario et plusieurs ennemis : la plante Piranha, les Koopa (tortues jaunes) et les Goomba (champignons marron). J'ai également ajouté une animation légère, notamment sur les pièces, afin qu'elles tournent sur elles-mêmes.",
+                competences: ["Organisation des différents calques", "Travail en autonomie"],
+                hardskills: ["Blender", "animations simples en 3D"],
+                bilan: "Avant ce cours, je n'avais jamais travaillé en 3D, car cela me paraissait trop complexe. Finalement, j'ai beaucoup apprécié ce projet, au point d'y consacrer plusieurs heures supplémentaires. Cette expérience constitue également un atout pour mon projet professionnel, qui s'oriente vers le domaine du jeu vidéo."
+            },
+            {
+                title: "Test Unity",
+                media: "media/projet/Proto.mp4",
+                mediaType: "video",
+                category: "level-design",
+                context: "Dans l’objectif de travailler dans le monde du jeu vidéo et de devenir level designer, j’ai pour but de réaliser un RPG en 3D en apprenant par mes propres moyens, en regardant de nombreuses vidéos YouTube ou en utilisant l’IA comme enseignante.",
+                production: "Pour développer ce test, j’ai donc commencé à réaliser tous les assets 3D en low poly avec Blender, ainsi que toutes les animations de mes personnages, en créant mes propres rigs. Dans la continuité, j’ai importé mes assets dans Unity, qui est un moteur de jeu. À noter aussi que l’arbre à droite est un asset que j’ai pris sur l’Asset Store de Unity. Pour tout ce qui est du développement en C#, je l’ai réalisé à l’aide de ChatGPT afin de m’assister sur les compétences où j’ai le plus de faiblesses. J’ai ainsi pu faire apparaître une bulle de dialogue en approchant de mon PNJ, lancer une animation d’attaque et synchroniser mon animation de course.",
+                competences: ["Soif d’apprentissage", "Patience, rigueur et motivation"],
+                hardskills: ["Blender", "Unity"],
+                bilan: "Ceci est donc un petit pas supplémentaire vers mon objectif de devenir level designer. Parmi toutes les compétences que j’ai pu exploiter durant ce test, la modélisation 3D reste le domaine que j’apprécie le plus."
+            },
+            {
+                title: "Panneau Jagu",
+                media: "media/projet/Panneau.jpg",
+                mediaType: "image",
+                category: "level-design",
+                context: "Dans le cadre d’un projet dont le but était de proposer des idées de signalétiques pour le Parc de la Roche-Jagu situé à Ploëzal, j’ai souhaité réaliser une maquette 3D afin de mieux visualiser le positionnement de mon panneau.",
+                production: "Pour créer cette maquette, je l’ai d’abord imaginée et esquissée sur papier, puis modélisée en 3D sur Blender. Afin d’obtenir un sol plus réaliste, j’ai également généré le terrain dans Blender en y appliquant une image de paysage.",
+                competences: ["Autonomie"],
+                hardskills: ["Blender : appliquer une texture, modélisation simple"],
+                bilan: "Cette maquette que j’ai réalisée m’a permis de mieux visualiser un environnement en 3D et de jouer avec la perspective."
+            },
+            {
+                title: "Audit Yves rocher",
+                media: "media/projet/Audit.png",
+                mediaType: "image",
+                category: "marketing",
+                context: "Dans un exercice où l’on devait réaliser six audits sur la marque de notre choix, mon équipe et moi avons choisi la célèbre marque Yves Rocher afin d’effectuer une étude approfondie. Les audits réalisés ont été : l’histoire de la marque, l’audit de contexte, économique, de l’architecture de l’information, sémiotique et de l’ergonomie du site.",
+                production: "Comme nous étions quatre sur ce projet, nous nous sommes réparti les audits par paires de deux. Dans une phase de divergence, nous avons recherché des sources pour alimenter nos audits. Enfin, lors de la phase de convergence, nous avons mis en commun nos liens et nos travaux afin de convenir de ce qu’il fallait garder ou non.",
+                competences: ["Recherche documentaire", "Travail d'équipe"],
+                hardskills: ["SWOT","PESTEL"],
+                bilan: "Cet exercice m’a permis de mettre mes compétences en pratique avec des personnes avec lesquelles je n’avais pas encore travaillé, ce qui a abouti à une très bonne ambiance de groupe ainsi qu’à un résultat qui nous paraissait complet.",
+                buttonText: "Voir le document",
+                buttonLink: "media/projet/Audit.pdf"
+            },
+            {
+                title: "Étude Breiz cola",
+                media: "media/projet/breizh.png",
+                mediaType: "image",
+                category: "marketing",
+                context: "Dans le cadre d’un exercice de cours, nous avons réalisé, en équipe de quatre, une étude sur la marque Breizh Cola afin de cibler le positionnement de la marque et celui de ses concurrents.",
+                production: "Nous avons utilisé nos outils principaux, le SWOT ainsi que le PESTEL, pour mieux connaître la marque en détail. Après avoir effectué nos recherches sur sa concurrence, nous avons mis en place une matrice BCG (Boston Consulting Group) afin de déterminer quels produits fonctionnaient le mieux pour l’entreprise. Nous avons ensuite rédigé une courte recommandation marketing pour le groupe Breizh Cola et terminé avec la matrice Ansoff, qui a pour objectif d’aider les entreprises à explorer différentes options de croissance.",
+                competences: ["Recherche documentaire", "Travail d'équipe","Prise de décisions"],
+                hardskills: ["SWOT","PESTEL","Matrice BCG","Matrice Ansoff"],
+                bilan: "Ce projet nous a bien ancrés dans l’univers marketing grâce à une grande variété d’outils utilisés.",
+                buttonText: "Voir l'étude",
+                buttonLink: "media/projet/breizh.pdf"
+            },
+            {
+                title: "Aquaskin",
+                media: "media/projet/Aquaskin.png",
+                mediaType: "image",
+                category: "marketing",
+                context: "Ce projet de webmarketing a pour but de mettre notre créativité en jeu, car la première consigne a été d’imaginer une marque. Avec mon binôme, nous avons choisi de créer une marque de skincare ayant la particularité de protéger du chlore. Une étude approfondie a ensuite été réalisée, avec pour objectif final de développer un site Prestashop.",
+                production: "Pour commencer notre étude, il nous a fallu compléter plusieurs points, dont : trois objectifs SMART, un benchmark suivi d’une conclusion, nos personas, les canaux de communication puis une charte graphique. Grâce à cela, nous avons pu commencer notre maquette avec Figma pour notre futur site Prestashop.",
+                competences: ["Travail d’équipe", "Recherche documentaire", "Idéalisation d’un concept"],
+                hardskills: ["Figma", "Benchmark", "Charte graphique"],
+                bilan: "Ce projet m’a permis de mobiliser de nombreuses compétences déjà vues en cours et en stage. À deux, nous avons pu mettre à profit l’expérience acquise durant ces trois années en MMI.",
+                buttonText: "Voir le projet",
+                buttonLink: "media/projet/Aquaskin.pdf"
+            }
+        ];
 
-    <!-- Scripts -->
-    <script src="./js/main.js"></script>
+        // Fonction pour filtrer les projets
+        function filterProjects(category) {
+            const projectCards = document.querySelectorAll('.project-card');
+            const categoryButtons = document.querySelectorAll('.category-btn');
+
+            // Mettre à jour les boutons actifs
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filtrer les cartes
+            projectCards.forEach(card => {
+                if (category === 'tous') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.getAttribute('data-category') === category) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // Fonction modifiée pour ouvrir le modal
+function openModal(projectIndex) {
+    console.log("Ouverture du modal pour le projet:", projectIndex);
+    const modal = document.getElementById('projectModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalVideoSource = document.getElementById('modalVideoSource');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+
+    const project = projectsData[projectIndex];
+
+    modalTitle.textContent = project.title;
+
+    // Cacher à la fois l'image et la vidéo par défaut
+    modalImage.style.display = 'none';
+    modalVideo.style.display = 'none';
+
+    // Pause la vidéo si elle était en cours
+    modalVideo.pause();
+
+    // Afficher l'image ou la vidéo selon le type
+    if (project.mediaType === 'video') {
+        modalVideoSource.src = project.media;
+        modalVideo.load();
+        modalVideo.style.display = 'block';
+    } else {
+        modalImage.src = project.media;
+        modalImage.style.display = 'block';
+    }
+
+    // Construction du contenu avec bouton conditionnel
+    let descriptionHTML = '';
+
+    // Ajouter le bouton en premier si défini
+    if (project.buttonText && project.buttonLink) {
+        descriptionHTML += `
+            <div class="modal-section modal-button-section">
+                <a href="${project.buttonLink}" target="_blank" class="modal-action-button">                  
+                <button type="button" class="button">
+                        <div class="button-top">${project.buttonText}</div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                    </button></a>
+            </div>
+        `;
+    }
+
+    // Puis ajouter le reste du contenu
+    descriptionHTML += `
+        <div class="modal-section">
+            <h3>Contexte & objectifs de résultats</h3>
+            <p>${project.context}</p>
+        </div>
+        <div class="modal-section">
+            <h3>Production / Missions</h3>
+            <p>${project.production}</p>
+        </div>
+        <div class="modal-section">
+            <h3>Compétences mobilisées (Softskills)</h3>
+            <ul>
+                ${project.competences.map(comp => `<li>${comp}</li>`).join('')}
+            </ul>
+        </div>
+        <div class="modal-section">
+            <h3>Hardskills</h3>
+            <ul>
+                ${project.hardskills.map(skill => `<li>${skill}</li>`).join('')}
+            </ul>
+        </div>
+        <div class="modal-section">
+            <h3>Bilan Personnel</h3>
+            <p>${project.bilan}</p>
+        </div>
+    `;
+
+    modalDescription.innerHTML = descriptionHTML;
+
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+        
+
+        // Fonction pour fermer le modal
+        function closeModal() {
+            const modal = document.getElementById('projectModal');
+            const modalVideo = document.getElementById('modalVideo');
+
+            // Pause la vidéo lors de la fermeture
+            modalVideo.pause();
+
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermeture en cliquant en dehors du modal
+        window.onclick = function (event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Gestion du formulaire de contact
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const messageDiv = document.getElementById('formMessage');
+
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+
+            const mailtoLink = `mailto:thomaslemoine215@email.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            )}`;
+
+            window.location.href = mailtoLink;
+
+            messageDiv.textContent = 'Votre client email va s\'ouvrir. Si cela ne fonctionne pas, veuillez m\'envoyer un email à thomaslemoine215@email.com';
+            messageDiv.className = 'form-message success';
+            messageDiv.style.display = 'block';
+
+            setTimeout(() => {
+                form.reset();
+                messageDiv.style.display = 'none';
+            }, 5000);
+        });
+
+        // Scroll fluide pour les liens de navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
