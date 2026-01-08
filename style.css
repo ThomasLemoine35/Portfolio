@@ -14,9 +14,9 @@
 
 .category-btn {
     padding: 12px 30px;
-    border: 2px solid #333;
     background: white;
-    color: #333;
+    color: #ff9a56;
+    background-color: #0097b2;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -27,11 +27,18 @@
 .category-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #ff9a56;
+    color: #0097b2;
 }
 
 .category-btn.active {
-    background: #333;
-    color: white;
+    background: #0097b2;
+    color: #ff9a56;
+}
+
+.category-btn.active:hover{
+    background: #ff9a56;
+    color: #0097b2;
 }
 
 .project-card {
@@ -175,6 +182,28 @@ nav ul {
     color: rgb(0, 0, 0);
     text-align: center;
 }
+
+.hero-cv{
+    width: 250px;
+    height: 50px;
+    margin-top: 300px;
+    margin-left: -990px;
+    color: #ff9a56;
+    background-color: #0097b2;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hero-cv:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #0097b2;
+    background-color: #ff9a56;
+}
+
 
 .hero-content h1 {
     font-size: 3em;
@@ -554,6 +583,11 @@ nav ul {
         flex-direction: column;
         text-align: center;
     }
+
+    .hero-cv{
+   /* margin-top: 300px;*/
+    margin-left: 100px;
+}
 
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
