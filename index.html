@@ -11,37 +11,34 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#contact"><button type="button" class="button">
-                        <div class="button-top">Contact</div>
-                        <div class="button-bottom"></div>
-                        <div class="button-base"></div>
+            <li><a href="#contact"><button type="button" class="button">Contact
                     </button></a></li>
-            <li><a href="#accueil"><button type="button" class="button">
-                        <div class="button-top">Accueil</div>
-                        <div class="button-bottom"></div>
-                        <div class="button-base"></div>
+            <li><a href="#accueil"><button type="button" class="button">Accueil
                     </button></a></li>
-            <li><a href="#qui-suis-je"><button type="button" class="button">
-                        <div class="button-top">Qui-suis-je</div>
-                        <div class="button-bottom"></div>
-                        <div class="button-base"></div>
+            <!-- <li><a href="#qui-suis-je"><button type="button" class="button">Qui-suis-je -->
                     </button></a></li>
-            <li><a href="#portfolio"><button type="button" class="button">
-                        <div class="button-top">Portfolio</div>
-                        <div class="button-bottom"></div>
-                        <div class="button-base"></div>
+            <li><a href="#portfolio"><button type="button" class="button">Portfolio
                     </button></a></li>
+            <li><a href="media/Lemoine_Thomas_CV.pdf" target="_blank">
+                    <button class="button">CV</button></a></li>
         </ul>
     </nav>
 
-    <section id="accueil" class="hero">
+    <section class="hero">
         <div class="hero-content">
             <h1>Thomas Lemoine</h1>
-            <p>Étudiant en BUT MMI (Métiers du multimédia et de l'internet)</p>
-            <p>À la recherche d'un stage d'ici le 9 Mars jusqu'au 19 Juin</p>
+            <!-- <p>Étudiant en BUT MMI (Métiers du multimédia et de l'internet)</p> -->
+            <p>À la recherche d'un stage à partir du 19 Mars ( 15 semaine )</p>
         </div>
-        <a href="media/Lemoine_Thomas_CV.pdf"target="_blank">                 
-        <button class="hero-cv">Télécharger mon CV</button></a>
+        <div class="hero-bio">
+            <div id="cadre"><img class="profile" src="media/profile.jpg" alt=""></div>
+            <hr style="border: 1px solid #dcdcdc; width: 80%; margin: 20px auto;">
+            <p>Fortement attiré par le Multimédia, j'aime travailler sur des projets personnels sur mon temps libre pour
+                développer mes compétences, notamment dans le domaine de la 3D ou de l'illustration. J'ai également un
+                oeil qui analyse tout ce qui passe, me permettant d'arriver à des conclusions sur les bonnes pratiques
+                ou non à adopter.</p>
+        </div>
+
         <div class="hero-image">
             <div class="video-background">
                 <video autoplay muted loop id="backgroundVideo">
@@ -52,25 +49,19 @@
         </div>
     </section>
 
+
+    
     <section id="portfolio" class="projects">
-        <h2>Mes Projets</h2>
+        <p id="copyright">© 2026 | Thomas Lemoine</p>
+        <h2 id="projet">Mes Projets</h2>
 
         <div class="category-filters">
-            <button class="category-btn active" onclick="filterProjects('tous')">Tous</button>
-            <button class="button" onclick="filterProjects('illustration')">
-                <div class="button-top">Illustration</div>
-                <div class="button-bottom"></div>
-                <div class="button-base"></div>
+            <button class="button" onclick="filterProjects('tous')">Tous</button>
+            <button class="button" onclick="filterProjects('illustration')">Illustration
             </button>
-            <button class="button" onclick="filterProjects('level-design')">
-                <div class="button-top">Level Design</div>
-                <div class="button-bottom"></div>
-                <div class="button-base"></div>
+            <button class="button" onclick="filterProjects('level-design')">Level Design
             </button>
-            <button class="button" onclick="filterProjects('marketing')">
-                <div class="button-top">Marketing</div>
-                <div class="button-bottom"></div>
-                <div class="button-base"></div>
+            <button class="button" onclick="filterProjects('marketing')">Marketing
             </button>
         </div>
 
@@ -112,8 +103,8 @@
                 <h3>Test Unity</h3>
             </div>
             <div class="project-card" data-category="level-design" onclick="openModal(9)">
-                <img class="project-image" src="media/projet/Panneau.jpg" alt="">
-                <h3>Panneau Jagu</h3>
+                <img class="project-image" src="media/projet/P1.JPG" alt="">
+                <h3>Idée de signalétique pour la Roche Jagu</h3>
             </div>
             <div class="project-card" data-category="marketing" onclick="openModal(10)">
                 <img class="project-image" src="media/projet/Audit.png" alt="">
@@ -149,29 +140,6 @@
             </div>
         </div>
     </div>
-
-    <section id="qui-suis-je" class="skills">
-        <div class="skills-container">
-            <div class="skill-box">
-                <h3>Bac STI2D</h3>
-                <p>Sciences et Technologies de l'Industrie et du Développement Durable</p>
-                <hr style="border: 1px solid rgb(255, 255, 255); width: 80%; margin: 20px auto;">
-                <p>J'ai choisi la spécialité ITEC où j'ai appris à utiliser un logiciel pour faire des pièces en 3D :
-                    SolidWorks</p><br>
-
-                <p class="education-place">Lycée Maupertuis : 2021-2023</p>
-            </div>
-            <div class="skill-box">
-                <h3>BUT MMI</h3>
-                <p>Métiers du Multimédia et de l'Internet</p>
-                <hr style="border: 1px solid rgb(255, 255, 255); width: 80%; margin: 20px auto;">
-                <p>La MMI m'apporte des connaissances sur une grande diversité de domaines : communication,
-                    programmation, audiovisuel, marketing, gestion de projet</p><br>
-
-                <p class="education-place">IUT à Lannion : 2023-2026</p>
-            </div>
-        </div>
-    </section>
 
     <section id="contact" class="contact">
         <div class="contact-container">
@@ -216,7 +184,7 @@
                     <div class="form-group">
                         <textarea name="message" placeholder="Votre message" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Envoyer</button>
+                    <button type="submit" class="button">Envoyer</button>
                     <div id="formMessage" class="form-message"></div>
                 </form>
             </div>
@@ -327,14 +295,14 @@
             },
             {
                 title: "Panneau Jagu",
-                media: "media/projet/Panneau.jpg",
+                media: "media/projet/Jagu.JPG",
                 mediaType: "image",
                 category: "level-design",
-                context: "Dans le cadre d’un projet dont le but était de proposer des idées de signalétiques pour le Parc de la Roche-Jagu situé à Ploëzal, j’ai souhaité réaliser une maquette 3D afin de mieux visualiser le positionnement de mon panneau.",
-                production: "Pour créer cette maquette, je l’ai d’abord imaginée et esquissée sur papier, puis modélisée en 3D sur Blender. Afin d’obtenir un sol plus réaliste, j’ai également généré le terrain dans Blender en y appliquant une image de paysage.",
-                competences: ["Autonomie"],
-                hardskills: ["Blender : appliquer une texture, modélisation simple"],
-                bilan: "Cette maquette que j’ai réalisée m’a permis de mieux visualiser un environnement en 3D et de jouer avec la perspective."
+                context: "Dans le cadre d’un projet dont l'objectif était de proposer des idées de signalétiques pour le Parc de la Roche-Jagu situé à Ploëzal. En équipe de cinq, nous avons donc proposé une signalétique s'inspirant du biomimétisme ( Ce qui s'inspire de la nature).",
+                production: "Pour travailler ensemble, nous avons utilisé la méthode des doubles diamants qui consiste à travailler de chaque côté en phase de divergence et de mettre en commun en convergence à l'aide d'un planning. Il y a eu trois phases de conception avec la première qui était une phase d'idéation, la deuxième  était de réaliser nos panneaux à taille réelle avec du carton au maker space, puis la troisième consistait à présenter nos panneaux réalisés en bois.",
+                competences: ["S'adapter à l'environnement","Évaluer le terrains"],
+                hardskills: ["Cotation sur Adoble illustrator"],
+                bilan: "Ce projet m'a permis de développer un œil critique sur les différents éléments à prendre en compte pour un panneau : dénivelé, temps de trajet, etc..."
             },
             {
                 title: "Audit Yves rocher",
@@ -344,7 +312,7 @@
                 context: "Dans un exercice où l’on devait réaliser six audits sur la marque de notre choix, mon équipe et moi avons choisi la célèbre marque Yves Rocher afin d’effectuer une étude approfondie. Les audits réalisés ont été : l’histoire de la marque, l’audit de contexte, économique, de l’architecture de l’information, sémiotique et de l’ergonomie du site.",
                 production: "Comme nous étions quatre sur ce projet, nous nous sommes réparti les audits par paires de deux. Dans une phase de divergence, nous avons recherché des sources pour alimenter nos audits. Enfin, lors de la phase de convergence, nous avons mis en commun nos liens et nos travaux afin de convenir de ce qu’il fallait garder ou non.",
                 competences: ["Recherche documentaire", "Travail d'équipe"],
-                hardskills: ["SWOT","PESTEL"],
+                hardskills: ["SWOT", "PESTEL"],
                 bilan: "Cet exercice m’a permis de mettre mes compétences en pratique avec des personnes avec lesquelles je n’avais pas encore travaillé, ce qui a abouti à une très bonne ambiance de groupe ainsi qu’à un résultat qui nous paraissait complet.",
                 buttonText: "Voir le document",
                 buttonLink: "media/projet/Audit.pdf"
@@ -356,8 +324,8 @@
                 category: "marketing",
                 context: "Dans le cadre d’un exercice de cours, nous avons réalisé, en équipe de quatre, une étude sur la marque Breizh Cola afin de cibler le positionnement de la marque et celui de ses concurrents.",
                 production: "Nous avons utilisé nos outils principaux, le SWOT ainsi que le PESTEL, pour mieux connaître la marque en détail. Après avoir effectué nos recherches sur sa concurrence, nous avons mis en place une matrice BCG (Boston Consulting Group) afin de déterminer quels produits fonctionnaient le mieux pour l’entreprise. Nous avons ensuite rédigé une courte recommandation marketing pour le groupe Breizh Cola et terminé avec la matrice Ansoff, qui a pour objectif d’aider les entreprises à explorer différentes options de croissance.",
-                competences: ["Recherche documentaire", "Travail d'équipe","Prise de décisions"],
-                hardskills: ["SWOT","PESTEL","Matrice BCG","Matrice Ansoff"],
+                competences: ["Recherche documentaire", "Travail d'équipe", "Prise de décisions"],
+                hardskills: ["SWOT", "PESTEL", "Matrice BCG", "Matrice Ansoff"],
                 bilan: "Ce projet nous a bien ancrés dans l’univers marketing grâce à une grande variété d’outils utilisés.",
                 buttonText: "Voir l'étude",
                 buttonLink: "media/projet/breizh.pdf"
@@ -401,42 +369,42 @@
         }
 
         // Fonction modifiée pour ouvrir le modal
-function openModal(projectIndex) {
-    console.log("Ouverture du modal pour le projet:", projectIndex);
-    const modal = document.getElementById('projectModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalVideo = document.getElementById('modalVideo');
-    const modalVideoSource = document.getElementById('modalVideoSource');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDescription = document.getElementById('modalDescription');
+        function openModal(projectIndex) {
+            console.log("Ouverture du modal pour le projet:", projectIndex);
+            const modal = document.getElementById('projectModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalVideo = document.getElementById('modalVideo');
+            const modalVideoSource = document.getElementById('modalVideoSource');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
 
-    const project = projectsData[projectIndex];
+            const project = projectsData[projectIndex];
 
-    modalTitle.textContent = project.title;
+            modalTitle.textContent = project.title;
 
-    // Cacher à la fois l'image et la vidéo par défaut
-    modalImage.style.display = 'none';
-    modalVideo.style.display = 'none';
+            // Cacher à la fois l'image et la vidéo par défaut
+            modalImage.style.display = 'none';
+            modalVideo.style.display = 'none';
 
-    // Pause la vidéo si elle était en cours
-    modalVideo.pause();
+            // Pause la vidéo si elle était en cours
+            modalVideo.pause();
 
-    // Afficher l'image ou la vidéo selon le type
-    if (project.mediaType === 'video') {
-        modalVideoSource.src = project.media;
-        modalVideo.load();
-        modalVideo.style.display = 'block';
-    } else {
-        modalImage.src = project.media;
-        modalImage.style.display = 'block';
-    }
+            // Afficher l'image ou la vidéo selon le type
+            if (project.mediaType === 'video') {
+                modalVideoSource.src = project.media;
+                modalVideo.load();
+                modalVideo.style.display = 'block';
+            } else {
+                modalImage.src = project.media;
+                modalImage.style.display = 'block';
+            }
 
-    // Construction du contenu avec bouton conditionnel
-    let descriptionHTML = '';
+            // Construction du contenu avec bouton conditionnel
+            let descriptionHTML = '';
 
-    // Ajouter le bouton en premier si défini
-    if (project.buttonText && project.buttonLink) {
-        descriptionHTML += `
+            // Ajouter le bouton en premier si défini
+            if (project.buttonText && project.buttonLink) {
+                descriptionHTML += `
             <div class="modal-section modal-button-section">
                 <a href="${project.buttonLink}" target="_blank" class="modal-action-button">                  
                 <button type="button" class="button">
@@ -446,42 +414,37 @@ function openModal(projectIndex) {
                     </button></a>
             </div>
         `;
-    }
+            }
 
-    // Puis ajouter le reste du contenu
-    descriptionHTML += `
+            // Puis ajouter le reste du contenu
+            descriptionHTML += `
         <div class="modal-section">
-            <h3>Contexte & objectifs de résultats</h3>
+            <p><strong>Contexte & objectifs de résultats</strong></p>
             <p>${project.context}</p>
-        </div>
-        <div class="modal-section">
-            <h3>Production / Missions</h3>
+        
+            <p><strong>Moyens mis en œuvre</strong></p>
             <p>${project.production}</p>
-        </div>
-        <div class="modal-section">
-            <h3>Compétences mobilisées (Softskills)</h3>
+      
+            <p><strong>Softskills</strong></p>
             <ul>
                 ${project.competences.map(comp => `<li>${comp}</li>`).join('')}
             </ul>
-        </div>
-        <div class="modal-section">
-            <h3>Hardskills</h3>
+        
+            <p><strong>Hardskills</strong></p>
             <ul>
                 ${project.hardskills.map(skill => `<li>${skill}</li>`).join('')}
             </ul>
-        </div>
-        <div class="modal-section">
-            <h3>Bilan Personnel</h3>
+            <p><strong>Bilan Personnel</strong></p>
             <p>${project.bilan}</p>
         </div>
     `;
 
-    modalDescription.innerHTML = descriptionHTML;
+            modalDescription.innerHTML = descriptionHTML;
 
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-        
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
 
         // Fonction pour fermer le modal
         function closeModal() {
@@ -546,6 +509,24 @@ function openModal(projectIndex) {
             });
         });
     </script>
+
+    <footer>
+        <div>
+            <h3>Réseaux</h3>
+            <ul>
+                <li><img src="" alt=""></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Autres liens</h3>
+            <ul>
+                <li>
+                    <link rel="stylesheet" href="">
+                </li>
+            </ul>
+        </div>
+    </footer>
+
 </body>
 
 </html>
