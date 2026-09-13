@@ -10,7 +10,10 @@
 
 <body>
     <nav>
-        <ul>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul id="navMenu">
             <li><a href="#contact"><button type="button" class="button">Contact
                     </button></a></li>
             <li><a href="#accueil"><button type="button" class="button">Accueil
@@ -505,6 +508,25 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        // Menu burger responsive
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', function () {
+            const isOpen = navMenu.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Ferme le menu mobile après avoir cliqué sur un lien
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
     </script>
